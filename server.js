@@ -13,7 +13,7 @@ const app = express();
 // Enable CORS for frontend
 app.use(cors({
   origin: process.env.NODE_ENV === 'production'
-    ? ['https://ruralgrow-xs66.onrender.com'] // ✅ Your Render frontend domain
+    ? ['https://deploytest-r5j3.onrender.com'] // ✅ Your Render frontend domain
     : ['http://localhost:5173'],
   credentials: true
 }));

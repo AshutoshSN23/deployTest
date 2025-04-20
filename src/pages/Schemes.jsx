@@ -28,7 +28,7 @@ const Schemes = () => {
     const fetchSchemes = async () => {
       const baseURL =
         import.meta.env.PROD
-          ? 'https://ruralgrow-xs66.onrender.com'
+          ? 'https://deploytest-r5j3.onrender.com'
           : 'http://localhost:5000';
   
       try {

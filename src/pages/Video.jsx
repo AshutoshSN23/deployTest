@@ -25,7 +25,7 @@ const Video = () => {
   const { vpid } = useParams();
   const [captions, setCaptions] = useState("");
   const [translated, setTranslated] = useState("");
-  const [selectedLang, setSelectedLang] = useState("kn");
+  const [selectedLang, setSelectedLang] = useState("mr");
   const [audioUrl, setAudioUrl] = useState(null);
   const audioRef = useRef(null);
   const ytPlayerRef = useRef(null);
