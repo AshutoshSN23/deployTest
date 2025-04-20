@@ -28,19 +28,28 @@ const Schemes = () => {
     const fetchSchemes = async () => {
       const baseURL =
         import.meta.env.PROD
-          ? 'https://ruralgrow-xs66.onrender.com' // 🔁 Replace with actual Render backend URL
+          ? 'https://ruralgrow-xs66.onrender.com'
           : 'http://localhost:5000';
   
       try {
         const resp = await axios.get(`${baseURL}/getSchemes`);
-        setSchemes(resp.data);
+        console.log("RESPONSE: ", resp);
+        
+        if (Array.isArray(resp.data)) {
+          setSchemes(resp.data);
+        } else {
+          console.warn("Expected array but got:", resp.data);
+          setSchemes([]); // fallback to empty array
+        }
       } catch (err) {
         console.error("Failed to fetch schemes:", err);
+        setSchemes([]); // ensure fallback to array
       }
     };
   
     fetchSchemes();
   }, []);
+  
   
 
   const handleLanguageChange = async (index, lang) => {
