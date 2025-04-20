@@ -146,7 +146,7 @@ Answer: <correct option letter>
         <p style={{ textAlign: 'center', fontSize: '1.2rem', color:'blue' }}>⏳ Generating quiz questions...</p>
       ) : showResult ? (
         <div>
-          <h3 style={{ textAlign: 'center' }}>
+          <h3 style={{ textAlign: 'center', color:'black' }}>
             🎉 You scored {userAnswers.filter(ans => ans.selected === ans.correct).length} out of {quizList.length}
           </h3>
           <button onClick={restartQuiz}
@@ -190,14 +190,15 @@ Answer: <correct option letter>
                     backgroundColor: bgColor,
                     padding: '0.5rem 1rem',
                     borderRadius: '8px',
-                    marginBottom: '0.5rem'
+                    marginBottom: '0.5rem',
+                    color:'black'
                   }}>
                     {opt}
                   </div>
                 );
               })}
-              <p><strong>Correct:</strong> {entry.correct}</p>
-              <p><strong>You selected:</strong> {entry.selected}</p>
+              <p style={{color:'black'}}><strong>Correct:</strong> {entry.correct}</p>
+              <p  style={{color:'black'}}><strong>You selected:</strong> {entry.selected}</p>
             </div>
           ))}
         </div>
