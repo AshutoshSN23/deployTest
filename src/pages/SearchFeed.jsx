@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchFromAPI } from '../utils/fetchFromAPI';
+import { fetchFromAPI } from '../utils/fetchFromApi';
 import YouTubePlayerAll from '../components/YouTubePlayerAll';
 import axios from 'axios';
 import { analytics } from '../firebase';
