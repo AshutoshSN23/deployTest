@@ -27,7 +27,7 @@ Based only on the above content, generate 20 multiple-choice questions with 4 op
 Each question should be followed by 4 options and a clear correct answer.
 
 IMPORTANT:
-- Use the **same language** as the original content above.
+- Use the *same language* as the original content above.
 - Do not translate into English.
 - Respect the original tone and linguistic style.
 
@@ -139,7 +139,7 @@ Answer: <correct option letter>
               cursor: 'pointer'
             }}
           >
-            ▶️ Start Quiz
+            ▶ Start Quiz
           </button>
         </div>
       ) : loading ? (
