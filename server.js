@@ -53,6 +53,7 @@ async function scrapeAllPages() {
         console.error(`Error scraping page ${i}:`, error.message);
       }
     }
+  console.log("56: ", JSON.stringify(allSchemes, null, 2));
   
     return JSON.stringify(allSchemes, null, 2);
 }
