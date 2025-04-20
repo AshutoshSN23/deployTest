@@ -26,11 +26,22 @@ const Schemes = () => {
 
   useEffect(() => {
     const fetchSchemes = async () => {
-      const resp = await axios.get('http://localhost:5000/getSchemes');
-      setSchemes(resp.data);
+      const baseURL =
+        import.meta.env.PROD
+          ? 'https://ruralgrow-xs66.onrender.com' // 🔁 Replace with actual Render backend URL
+          : 'http://localhost:5000';
+  
+      try {
+        const resp = await axios.get(`${baseURL}/getSchemes`);
+        setSchemes(resp.data);
+      } catch (err) {
+        console.error("Failed to fetch schemes:", err);
+      }
     };
+  
     fetchSchemes();
   }, []);
+  
 
   const handleLanguageChange = async (index, lang) => {
     const scheme = schemes[index];
