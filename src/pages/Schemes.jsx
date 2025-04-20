@@ -27,7 +27,7 @@ const Schemes = () => {
   useEffect(() => {
     const fetchSchemes = async () => {
       const baseURL =
-        import.meta.env.PROD
+        import.meta.env.NODE_ENV
           ? 'https://deploytest-r5j3.onrender.com'
           : 'http://localhost:5000';
   
