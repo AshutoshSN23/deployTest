@@ -13,7 +13,7 @@ const app = express();
 // Enable CORS for production
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://your-render-domain.onrender.com'] // Replace with your actual Render domain
+    ? ['https://ruralgrow-xs66.onrender.com'] // Replace with your actual Render domain
     : ['http://localhost:5173'],
   credentials: true
 }));
